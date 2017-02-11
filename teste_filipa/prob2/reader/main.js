@@ -19,21 +19,13 @@ serialInclude([ '../lib/CGF.js',
                 'primitives/MySphere.js',
                 'primitives/MyTorus.js',
                 'primitives/MyTriangle.js',
-                'primitives/Plane.js',
-                'primitives/Patch.js',
-                'primitives/MyVehicle.js',
-				'primitives/MyChessboard.js',
                 'MyInterface.js',
-        		'MyLinearAnimation.js',
-        		'MyAnimation.js',
-        		'MyCircularAnimation.js',
-
 
 main=function()
 {
 	// Standard application, scene and interface setup
     var app = new CGFapplication(document.body);
-
+    
     var myInterface = new MyInterface();
 	var myScene = new XMLscene(myInterface);
     app.init();
@@ -46,9 +38,7 @@ main=function()
 	// get file name provided in URL, e.g. http://localhost/myproj/?file=myfile.xml
 	// or use "demo.xml" as default (assumes files in subfolder "scenes", check MySceneGraph constructor)
 
-  var filename=getUrlVars()['file'] || "cena.xml";
-  //var filename=getUrlVars()['file'] || "chesses.xml";
-  //var filename=getUrlVars()['file'] || "dsx3.xml";
+  var filename=getUrlVars()['file'] || "dsx1.xml";
   //var filename=getUrlVars()['file'] || "LAIG_TP1_DSX_T6_G8_v01/inferno.dsx";
   //var filename=getUrlVars()['file'] || "LAIG_TP1_DSX_T2_G04_v02/LAIG_TP1_DSX_T2_G04_v02.dsx";
 
